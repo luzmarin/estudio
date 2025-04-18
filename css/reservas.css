@@ -1,0 +1,1121 @@
+/*________________________________________________________*\
+index.css
+- Reset / Normalizar
+- variables
+- Global
+- Header
+- Main
+- Section
+- Footer
+\*_________________________________________________________*/
+
+*{
+    margin:0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+p a{
+    display: inline;
+}
+img , svg {
+    display: block;
+    width: 100%;
+    height: inherit;
+}
+svg{
+    fill: currentColor;
+}
+:root{
+    font-size: 100%;
+    scroll-behavior: smooth;
+
+/*_____Proyectos______*/  
+    --bg-PROYECTOS-POST:  rgb(255, 221, 0);    /* Color de la tipografía del titular y los enlaces */
+/*_____Tipografias______*/
+    --f-TEXTO-POST: 'Fautive';                  /*  Tipografía del titular y los enlaces  */
+/*____Tamaños________*/
+    --f-TITULAR-POST: 4em;                      /* Tamaño de la tipografia del titular y los enlaces */
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    hyphens: auto;
+}
+h1 , h2 , h3 , h4 , h5 , h6{
+    font-size: inherit;
+    font-weight: inherit;
+}
+form, input, textarea, label, select, button{
+    font-family: inherit;
+    font-size: inherit;
+    background-color: transparent;
+    display: block;
+}
+
+/*_____________ Cabecera ________________*/
+/*  Descripción: Estilos para la cabecera de la web*/
+/* Estructura: */
+/*      - Cabecera-enlaces
+        - Cabecera-img
+*/
+
+.header{
+    width: 100%;
+    min-height: 630px;
+  /*  background-color: rgb(221, 221, 128);*/
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    border-bottom: 0.1rem black solid;
+}
+.header__cabecera{
+    width: 250%;
+    min-height: 630px;
+   /* background-color: whitesmoke;*/
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+.header__servicios{
+    width: 11%;
+    min-height: 150px;
+  /*  background-color: rgb(148, 18, 148);*/
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    bottom: 10rem;
+    left: 10rem;
+
+    animation: header__servicios 2s ease both;
+}
+@keyframes header__servicios{
+    from{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+.header__a{
+    width: 120%;
+    min-height: 150px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: end;
+
+    position: relative;
+    bottom: 8rem;
+
+    font-family: var(--f-TITULAR-POST);
+    font-size: 1em;
+    font-weight: bold;
+}
+.header__quienSoy{
+    width: 15%;
+    min-height: 200px;
+   /* background-color: rgb(21, 159, 233);*/
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    top: 5rem;
+    right: 15rem;
+
+    animation: header__quienSoy 2s ease both;
+}
+@keyframes header__quienSoy{
+    from{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+.header__enlace{
+    width: 100%;
+    min-height: 200px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: end;
+
+    position: relative;
+    bottom: 12rem;
+
+    font-family: var(--f-TITULAR-POST);
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+}
+.header__proceso{
+    width: 15%;
+    min-height: 150px;
+  /*  background-color: rgb(18, 139, 82);*/
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    top: 15rem;
+
+    animation: header__proceso 2s ease both;
+}
+@keyframes header__proceso{
+    from{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+.header__aProceso{
+    width: 130%;
+    min-height: 130px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: end;
+
+    position: relative;
+    bottom: 6rem;
+
+    font-family: var(--f-TITULAR-POST);
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+}
+.header__proyectos{
+    width: 15%;
+    min-height: 100px;
+   /* background-color: rgb(244, 135, 52);*/
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    bottom: 9rem;
+
+    animation: header__proyectos 2s ease both;
+}
+@keyframes header__proyectos{
+    from{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+.header__aProyectos{
+    width: 100%;
+    min-height: 200px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    bottom: 5rem;
+
+    font-family: var(--f-TITULAR-POST);
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+}
+.header__agenda{
+    width: 15%;
+    min-height: 150px;
+ /*   background-color: rgb(251, 255, 0);*/
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    top: 5rem;
+
+    animation: header__agenda 2s ease both;
+}
+@keyframes header__agenda{
+    from{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+.header__titulo{
+    position: relative;
+    top: 1rem;
+    
+    font-family: var(--f-TEXTO-POST);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'Fautive';
+    src: url('./tipografias/FautiveBlack.otf') format('.otf');
+}
+.logo{
+    width: 25%;
+    min-height: 250px;
+ /*  background-color: rgb(40, 176, 217);*/
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+}
+
+/*_____________ Galería ________________*/
+/*  Descripción: Estilos para la galería de imágenes de la web*/
+/* Estructura: */
+/*      - Galería-img
+/*      - Galeria-texto */
+/*      - Galería-formulario */
+
+.section{
+    width: 100%;
+    min-height: 800px;
+ /*   background-color: beige;*/
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+.section__h2{
+    width: 100%;
+    min-height: 60px;
+   /* background-color: rgb(165, 129, 185);*/
+
+    padding: 2rem;
+    margin: 2rem;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    font-family: var(--f-TEXTO-POST);
+    font-size: var(--f-TITULAR-POST);
+    font-weight: bold;
+    text-decoration: underline var(--bg-PROYECTOS-POST) solid;
+}
+.section__cuestionario{
+    width: 80%;
+    min-height: 400px;
+    background-color: darksalmon;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+}
+.section__direccion{
+    width: 20%;
+    min-height: 250px;
+    background-color: white;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    bottom: 5rem;
+}
+.section__span--nombre{
+    padding: 1rem;
+    margin: 1rem;
+
+    font-family: var(--f-TEXTO-POST);
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
+.section__span{
+    padding: 0.5rem;
+}
+.section__datos{
+    width: 60%;
+    min-height: 200px;
+ /*   background-color: rgb(208, 33, 33);*/
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    left: 20rem;
+    bottom: 2rem;
+}
+.form{
+    font-family: var(--f-TEXTO-POST);
+    font-size: 1em;
+    font-weight: bold;
+}
+input[type=text]{
+    width: 40%;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    box-sizing: border-box;
+    border: 0.1rem solid white;
+    border-radius: 2rem;
+
+    position: relative;
+    right: 8rem;
+
+    transition: width 0.4s ease-in-out;
+}
+input[type=text]:focus{
+    background-color: lightblue;
+    width: 100%;
+}
+select{
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4rem;
+    background-color: white;
+
+    position: relative;
+    right: 8rem;
+}
+label{
+    padding: 0.5rem;
+
+    text-align: start;
+
+    position: relative;
+    right: 8rem;
+
+    color: white;
+    font-weight: 100;
+}
+input[type=checkbox]{
+    position: relative;
+    right: 8rem;
+}
+
+/*_____________ Pie de página - Footer ________________*/
+/*  Descripción: Estilos para el pie de página*/
+/* Estructura: */
+/*      - Footer-img
+/*      - Footer-enlaces */
+
+.footer{
+    width: 100%;
+    min-height: 500px;
+  /*  background-color: coral;*/
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    border-top: 0.1rem solid black;
+}
+.footer__fondo{
+    width: 90%;
+    min-height: 400px;
+    background-color: white;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+.enlaces{
+    width: 40%;
+    min-height: 200px;
+  /*  background-color: deepskyblue;*/
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+}
+.nav{
+    width: 60%;
+    min-height: 100px;
+   /* background-color: darkseagreen;*/
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.nav__ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    gap: 2rem;
+}
+.enlaces__redes{
+    width: 15%;
+    min-height: 30px;
+  /*  background-color: darkseagreen;*/
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    gap: 3rem;
+}
+
+/*_____________ @media ________________*/
+/*  Descripción: Estilos para la visualización de la web en diferentes dispositivos.
+Movil, tablet, ordenadores en pantalla grande */
+@media (max-width:1024px){
+    .header{
+        width: 100%;
+    }
+    .section{
+        width: 100%;
+    }
+}
+@media (max-width:800px){
+    .header{
+        width: 100%;
+    }
+    .header__servicios{
+        width: 20%;
+        left: 5rem;
+    }
+    .header__quienSoy{
+        right: 6rem;
+    }
+    .header__proyectos{
+        width: 25%;
+        left: 6rem;
+    }
+    .header__proceso{
+        width: 25%;
+    }
+    .header__agenda{
+        width: 20%;
+        right: 2rem;
+    }
+    .logo{
+        width: 40%;
+    }
+    .section{
+        width: 100%;
+    }
+    .section__h2{
+        font-size: 2.5em;
+    }
+    .section__cuestionario{
+        width: 100%;
+        min-height: 600px;
+        display: block;
+    }
+    .section__direccion{
+        width: 100%;
+        min-height: 100px;
+
+        position: relative;
+        top: 2rem;
+    }
+    .section__datos{
+        width: 100%;
+        left: 1rem;
+    }
+    .form{
+        width: 60%;
+        min-height: 20px;
+        left: 18rem;
+        bottom: 4rem;
+    }
+    .footer{
+        width: 100%;
+    }
+    .footer__fondo{
+        width: 100%;
+    }
+    .nav{
+        width: 100%;
+    }
+    .enlaces__redes{
+        width: 30%;
+        position: relative;
+        bottom: 2rem;
+    }
+}
+@media (max-width:712px){
+    .header{
+        width: 100%;
+    }
+    .header__servicios{
+        width: 20%;
+        left: 5rem;
+    }
+    .header__quienSoy{
+        right: 6rem;
+    }
+    .header__proyectos{
+        width: 25%;
+        left: 6rem;
+    }
+    .header__proceso{
+        width: 25%;
+    }
+    .header__agenda{
+        width: 20%;
+        right: 2rem;
+    }
+    .logo{
+        width: 40%;
+    }
+    .section{
+        width: 100%;
+    }
+    .section__h2{
+        font-size: 2.5em;
+    }
+    .section__cuestionario{
+        width: 100%;
+        min-height: 600px;
+        display: block;
+    }
+    .section__direccion{
+        width: 100%;
+        min-height: 100px;
+
+        position: relative;
+        top: 2rem;
+    }
+    .section__datos{
+        width: 100%;
+        left: 1rem;
+    }
+    .form{
+        width: 60%;
+        min-height: 20px;
+        left: 18rem;
+        bottom: 4rem;
+    }
+    .footer{
+        width: 100%;
+    }
+    .footer__fondo{
+        width: 100%;
+    }
+    .nav{
+        width: 100%;
+    }
+    .enlaces__redes{
+        width: 30%;
+        position: relative;
+        bottom: 2rem;
+    }
+}
+@media (max-width:600px){
+    .header{
+        width: 137%;
+    }
+    .header__servicios{
+        width: 20%;
+        left: 5rem;
+    }
+    .header__quienSoy{
+        right: 6rem;
+    }
+    .header__proyectos{
+        width: 25%;
+        left: 6rem;
+    }
+    .header__proceso{
+        width: 25%;
+    }
+    .header__agenda{
+        width: 20%;
+        right: 2rem;
+    }
+    .logo{
+        width: 40%;
+    }
+    .section{
+        width: 137%;
+    }
+    .section__h2{
+        font-size: 2em;
+    }
+    .section__cuestionario{
+        width: 137%;
+        min-height: 600px;
+        display: block;
+    }
+    .section__direccion{
+        width: 100%;
+        min-height: 100px;
+
+        position: relative;
+        top: 2rem;
+    }
+    .section__datos{
+        width: 100%;
+        left: 2rem;
+    }
+    .form{
+        width: 60%;
+        min-height: 20px;
+        left: 18rem;
+        bottom: 4rem;
+    }
+    .footer{
+        width: 137%;
+    }
+    .footer__fondo{
+        width: 100%;
+    }
+    .nav{
+        width: 100%;
+    }
+    .enlaces__redes{
+        width: 30%;
+    }
+}
+@media (max-width:480px){
+    .header{
+        width: 130%;
+    }
+    .header__servicios{
+        width: 20%;
+        left: 5rem;
+    }
+    .header__quienSoy{
+        right: 6rem;
+    }
+    .header__proyectos{
+        width: 25%;
+        left: 6rem;
+    }
+    .header__proceso{
+        width: 25%;
+    }
+    .header__agenda{
+        width: 20%;
+        right: 2rem;
+    }
+    .logo{
+        width: 40%;
+    }
+    .section{
+        width: 130%;
+    }
+    .section__h2{
+        font-size: 2em;
+    }
+    .section__cuestionario{
+        width: 100%;
+        display: block;
+    }
+    .section__picture{
+        bottom: 10rem;
+    }
+    .section__direccion{
+        width: 100%;
+        min-height: 100%;
+        bottom: 10rem;
+    }
+    .section__datos{
+        width: 100%;
+    }
+    .form{
+        width: 80%;
+        min-height: 20px;
+        left: 10rem;
+        bottom: 4rem;
+    }
+    .footer{
+        width: 130%;
+    }
+    .nav{
+        width: 100%;
+    }
+    .enlaces__picture{
+        width: 50%;
+    }
+}
+@media (max-width:412px){
+    .header{
+        width: 100%;
+    }
+    .header__cabecera{
+        width: 100%;
+    }
+    .header__servicios{
+        width: 50%;
+        bottom: 7rem;
+        left: 3rem;
+    }
+    .header__quienSoy{
+        width: 50%;
+        top: 13rem;
+        right: 3rem;
+    }
+    .header__proceso{
+        width: 40%;
+    }
+    .header__proyectos{
+        width: 50%;
+        left: 2rem;
+    }
+    .header__agenda{
+        top: 12rem;
+    }
+    .logo{
+        width: 50%;
+    }
+    .section{
+        width: 100%;
+    }
+    .section__h2{
+        width: 100%;
+        font-size: 1.2em;
+    }
+    .section__cuestionario{
+        width: 100%;
+        min-height: 580px;
+        justify-content: center;
+        display: block;
+    }
+    .section__direccion{
+        width: 100%;
+        position: relative;
+        bottom: 2rem;
+    }
+    .section__datos{
+        width: 90%;
+        position: relative;
+        top: 3rem;
+        left: 4.7rem;
+    }
+    .footer{
+        width: 100%;
+    }
+    .footer__fondo{
+        width: 100%;
+    }
+    .enlaces{
+        width: 70%;
+    }
+    .nav{
+        width: 50%;
+    }
+    .nav__ul{
+        width: 100%;
+    }
+    .nav__li{
+        width: 100%;
+        font-size: 0.8em;
+    }
+    .enlaces__redes{
+        width: 40%;
+        position: relative;
+        bottom: 2rem;
+    }
+}
+@media (max-width:384px){
+    .header{
+        width: 100%;
+    }
+    .header__cabecera{
+        width: 100%;
+    }
+    .header__servicios{
+        width: 50%;
+        bottom: 7rem;
+        left: 3rem;
+    }
+    .header__quienSoy{
+        width: 50%;
+        top: 13rem;
+        right: 3rem;
+    }
+    .header__proceso{
+        width: 40%;
+    }
+    .header__proyectos{
+        width: 50%;
+        left: 2rem;
+    }
+    .header__agenda{
+        top: 12rem;
+    }
+    .logo{
+        width: 50%;
+    }
+    .section{
+        width: 100%;
+    }
+    .section__h2{
+        width: 100%;
+        font-size: 1em;
+    }
+    .section__cuestionario{
+        width: 100%;
+        min-height: 580px;
+        justify-content: center;
+        display: block;
+    }
+    .section__direccion{
+        width: 100%;
+
+        position: relative;
+        bottom: 2rem;
+    }
+    .section__datos{
+        width: 95%;
+        position: relative;
+        top: 2.5rem;
+        left: 4.3rem;
+    }
+    .footer{
+        width: 100%;
+    }
+    .footer__fondo{
+        width: 100%;
+    }
+    .enlaces{
+        width: 70%;
+    }
+    .nav{
+        width: 100%;
+    }
+    .nav__ul{
+        width: 50%;
+    }
+    .nav__li{
+        width: 100%;
+        font-size: 0.8em;
+    }
+    .enlaces__redes{
+        width: 40%;
+        position: relative;
+        bottom: 3rem;
+    }
+}
+@media (max-width:360px){
+    .header{
+        width: 100%;
+    }
+    .logo{
+       top: 10rem;
+    }
+    .section{
+        width: 100%;
+    }
+    .section__h2{
+        width: 130%;
+    }
+    .section__cuestionario{
+        width: 100%;
+        min-height: 580px;
+        display: block;
+    }
+    .section__direccion{
+        width: 100%;
+    }
+    .section__datos{
+        width: 95%;
+        top: 3rem;
+        left: 4.2rem;
+    }
+    .footer{
+        width: 100%;
+    }
+    .footer__fondo{
+        width: 100%;
+    }
+    .enlaces{
+        width: 100%;
+    }
+    .enlaces__picture{
+        width: 60%;
+    }
+    .nav{
+        width: 100%;
+    }
+    .nav__ul{
+        width: 100%;
+        gap: 0.5rem;
+    }
+    .nav__li{
+        font-size: 0.8em;
+    }
+    .enlaces__redes{
+        width: 50%;
+        position: relative;
+        bottom: 2rem;
+    }
+}
+@media (max-width:320px){
+    .header{
+        width: 100%;
+        min-height: 300px;
+    }
+    .header__cabecera{
+        width: 100%;
+        min-height: 100px;
+    }
+    .header__servicios{
+        width: 50%;
+        bottom: 0.5rem;
+        left: 2rem;
+    }
+    .header__quienSoy{
+        width: 40%;
+        top: 10rem;
+        right: 2rem;
+    }
+    .header__proyectos{
+        width: 50%;
+        top: 1rem;
+        left: 2rem;
+    }
+    .header__proceso{
+        width: 40%;
+        min-height: 40px;
+        top: 9rem;
+    }
+    .header__agenda{
+        width: 30%;
+        min-height: 30px;
+        right: 1rem;
+        top: 9rem;
+    }
+    .header__a{
+        font-size: 0.8em;
+    }
+    .header__enlace{
+        font-size: 0.8em;
+    }
+    .header__aProyectos{
+        font-size: 0.8em;
+        bottom: 5rem;
+    }
+    .header__aProceso{
+        font-size: 0.8em;
+        bottom: 7rem;
+    }
+    .header__aServicios{
+        bottom: 8rem;
+        font-size:0.8em;
+        left: 2rem;
+    }
+    .header__aAgenda{
+        font-size: 1em;
+    }
+    .header__aQuienSoy{
+        font-size: 0.5em;
+    }
+    .logo{
+        width: 40%;
+    }
+    .logo__h1{
+        position: relative;
+        bottom: 9rem;
+    }
+    .section{
+        width: 100%;
+    }
+    .section__h2{
+        width: 80%;
+        font-size: 1em;
+        padding: 0.5rem;
+    }
+    .section__cuestionario{
+        width: 100%;
+        display: block;
+    }
+    .section__direccion{
+        width: 99%;
+        left: 0.1rem;
+    }
+    .section__datos{
+        width: 100%;
+        left: 4rem;
+    }
+    .form{
+        width: 95%;
+        position: relative;
+        top: 1rem;
+    }
+    .footer{
+        width: 100%;
+    }
+    .footer__fondo{
+        width: 100%;
+    }
+    .enlaces__picture{
+        width: 70%;
+    }
+    .nav{
+        width: 100%;
+    }
+    .nav__ul{
+        width: 100%;
+        gap: 0.5rem;
+    }
+    .nav__li{
+        font-size: 0.8em;
+    }
+    .enlaces__redes{
+        width: 40%;
+        gap: 1rem;
+    }
+}
