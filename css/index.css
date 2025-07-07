@@ -1,0 +1,3076 @@
+/*________________________________________________________*\
+index.css
+- Reset / Normalizar
+- variables
+- Global
+- Header
+- Main
+- Section
+- Footer
+\*_________________________________________________________*/
+
+*{
+    margin:0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+p a{
+    display: inline;
+}
+img , svg {
+    display: block;
+    width: 100%;
+    height: inherit;
+}
+svg{
+    fill: currentColor;
+}
+:root{
+    font-size: 100%;
+    scroll-behavior: smooth;
+
+/*_____Proyectos______*/
+    --bg-PROYECTOS-POST:  rgb(255, 221, 0);         /* FondoColor post proyectos */
+    --bg-RESERVA-POST: rgb(165, 129, 185);          /* FondoColor post reserva */
+    --bg-IDENTIDAD-POST:  rgb(85, 81, 158);         /* FondoColor post Indentidad */
+    --bg-MAQUETACION-POST:  rgb(227, 153, 194);     /* FondoColor post maquetación */
+    --c-MARQUESINA-POST: lightcoral;                /* Color post marqusina */
+    --c-PROYECTOS-POST: black;                      /* Color tipografía */
+/*_____Tipografias______*/
+    --f-TITULAR-POST: 'Fautive';
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    hyphens: auto;
+}
+h1 , h2 , h3 , h4 , h5 , h6{
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+/*_____________ Cabecera ________________*/
+/*  Descripción: Estilos para la cabecera de la web*/
+/* Estructura: */
+/*      - Cabecera-enlaces
+        - Cabecera-img
+*/
+
+.header{
+    width: 100%;
+    min-height: 630px;
+    /*background-color: rgb(221, 221, 128);*/
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.header__cabecera{
+    width: 100%;
+    min-height: 630px;
+   /* background-color: whitesmoke;*/
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+.header__servicios{
+    width: 11%;
+    min-height: 150px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    bottom: 10rem;
+    left: 10rem;
+
+    animation: header__servicios 2s ease both;
+}
+@keyframes header__servicios{
+    from{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+.header__quienSoy{
+    width: 15%;
+    min-height: 200px;
+   /* background-color: rgb(21, 159, 233);*/
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    top: 5rem;
+    right: 15rem;
+
+    animation: header__quienSoy 2s ease both;
+}
+@keyframes header__quienSoy{
+    from{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+.header__proceso{
+    width: 15%;
+    min-height: 150px;
+  /*  background-color: rgb(18, 139, 82);*/
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    top: 15rem;
+
+    animation: header__proceso 2s ease both;
+}
+@keyframes header__proceso{
+    from{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+.header__proyectos{
+    width: 15%;
+    min-height: 100px;
+   /* background-color: rgb(244, 135, 52);*/
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    bottom: 9rem;
+
+    animation: header__proyectos 2s ease both;
+}
+@keyframes header__proyectos{
+    from{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+.header__agenda{
+    width: 15%;
+    min-height: 150px;
+ /*   background-color: rgb(251, 255, 0);*/
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    top: 5rem;
+
+    animation: header__agenda 2s ease both;
+}
+@keyframes header__agenda{
+    from{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+.header__titulo{
+    width: 40%;
+    min-height: 40px;
+   /* background-color: white;*/
+
+    font-family: var(--f-TITULAR-POST);         /* Nombre tipografía */
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+.header__a{
+    width: 120%;
+    min-height: 150px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: end;
+
+    position: relative;
+    bottom: 8rem;
+
+    font-family: var(--f-TITULAR-POST);         /* Nombre tipografía */
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.header__enlace{
+    width: 100%;
+    min-height: 200px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: end;
+
+    position: relative;
+    bottom: 12rem;
+
+    font-family: var(--f-TITULAR-POST);             /* Nombre tipografía */
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+.header__aProceso{
+    width: 130%;
+    min-height: 130px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: end;
+
+    position: relative;
+    bottom: 7rem;
+
+    font-family: var(--f-TITULAR-POST);         /* Nombre tipografía */
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+.header__aProyectos{
+    width: 100%;
+    min-height: 200px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    bottom: 5rem;
+
+    font-family: var(--f-TITULAR-POST);             /* Nombre tipografía */
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+@font-face {
+    font-family: 'Fautive';
+    src: url('./tipografias/FautiveBlack.otf') format('.otf');
+}
+.logo{
+    width: 25%;
+    min-height: 250px;
+ /*  background-color: rgb(40, 176, 217);*/
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+}
+
+/*_____________ Galería ________________*/
+/*  Descripción: Estilos para la galería de imágenes de la web*/
+/* Estructura: */
+/*      - Galería-animación
+/*      - Galeria-info-texto */
+/*      - Galería-img */
+
+.marquesina{
+    width: 100%;
+    min-height: 60px;
+    background-color: var(--c-MARQUESINA-POST);         /* ColorFondo marquesina */
+
+    overflow: hidden;
+
+    border: 0.1rem solid var(--c-PROYECTOS-POST);
+}
+.marquesina__h2{
+    display: none;
+}
+.marquesina__wrapper{
+    width: 400%;
+    min-height: 60px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    animation: slide 35s ease-out infinite both;
+}
+.marquesina__div{
+    font-family: var(--f-TITULAR-POST);                     /* Nombre tipografía */
+    font-size: 3em;
+    font-weight: 300;
+    text-align: center;
+
+    background-color: lightcoral;
+}
+@keyframes slide{
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+.sectionServicios{
+    width: 100%;
+    min-height: 720px;
+   /* background-color: rgb(149, 127, 236);*/
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    border-bottom: 0.1rem solid var(--c-PROYECTOS-POST);
+}
+.sectionServicios__div{
+    width: 96%;
+    min-height: 650px;
+    /*background-color: rgb(7, 211, 133);*/
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+.sectionServicios__titular{
+    width: 100%;
+    min-height: 60px;
+  /*  background-color: rgb(6, 116, 116);*/
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.sectionServicios__h3{
+    font-family: var(--f-TITULAR-POST);                 /* Nombre tipografía */
+    font-size: 12em;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: black;
+}
+@font-face {
+    font-family: 'Fautive';
+    src: url('./tipografias/FautiveBlack.otf') format('.otf');
+}
+.sectionServicios__info{
+    width: 100%;
+    min-height: 600px;
+  /*  background-color: rgb(180, 83, 232);*/
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.sectionServicios__info--expansionMarca{
+    width: 80%;
+    min-height: 80px;
+    background-color: var(--bg-PROYECTOS-POST);             /* ColorFondo proyectos */
+
+    padding: 0.2rem;
+    margin: 0.2rem;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+.simbolo{
+    width: 100%;
+    min-height: 40px;
+    background-color: white;
+
+    margin: 2rem;
+    padding: 1rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: end;
+    align-items: center;
+
+    position: relative;
+    right: 2rem;
+    bottom: 2rem;
+}
+
+.fondoSimbolo{
+    width: 95%;
+    min-height: 400px;
+  /*  background-color: rgb(210, 210, 210);*/
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    bottom: 2rem;
+    right: 2rem;
+
+    border: 0.1rem var(--c-PROYECTOS-POST) solid;
+}
+.fondoSimbolo__titulo{
+    padding: 1rem;
+
+    font-family: var(--f-TITULAR-POST);                 /* Color tipografía */
+    font-size: 2.5em;
+    text-align: start;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.fondoSimbolo__titulo--pack{
+    font-size: 2.3em;
+}
+.fondoSimbolo__parrafo{
+    padding: 1rem;
+
+    font-family: var(--f-TITULAR-POST);                 /* Color tipografía */
+    font-size: 1.5em;
+    text-align: start;
+    color: black;
+}
+.fondoSimbolo__parrafo--identidad{
+    font-size: 1.3em;
+    color: black;
+}
+.sectionServicios__info--identidadVisual{
+    width: 80%;
+    min-height: 80px;
+    background-color: var(--bg-IDENTIDAD-POST);            /* ColorFondo identidad */
+
+    padding: 0.2rem;
+    margin: 0.2rem;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+.sectionServicios__info--maquetacion{
+    width: 80%;
+    min-height: 80px;
+    background-color: var(--bg-MAQUETACION-POST);           /*ColorFondo maquetación */
+
+    padding: 0.2rem;
+    margin: 0.2rem;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+.fondoSimbolo__parrafo--maquetacion{
+    font-size: 1.3em;
+}
+.sectionServicios__info--packaging{
+    width: 80%;
+    min-height: 80px;
+    background-color: var(--bg-RESERVA-POST);               /*ColorFondo reserva */
+
+    padding: 0.2rem;
+    margin: 0.2rem;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+.fondoSimbolo__parrafo--packaging{
+    font-size: 1.3em;
+}
+.sectionServicios__info--diseñoWeb{
+    width: 80%;
+    min-height: 80px;
+    background-color: var(--bg-PROYECTOS-POST);             /*ColorFondo proyectos */
+
+    padding: 0.2rem;
+    margin: 0.2rem;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+.sectionQuien{
+    width: 100%;
+ /*   background-color: rgb(227, 153, 194);*/
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.sectionQuien__div{
+    width: 100%;
+ /*   background-color: indianred;*/
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+.sectionQuien__info{
+    width: 100%;
+    min-height: 80px;
+  /*  background-color: darkgreen;*/
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.sectionQuien__h4{
+    font-family: var(--f-TITULAR-POST);                     /* Color tipografía */
+    font-size: 12em;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: black;
+    text-decoration: underline var(--bg-PROYECTOS-POST) solid;
+}
+.sectionQuien__informa{
+    width: 100%;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.fondoTexto{
+    width: 50%;
+
+  /*  background-color: yellow;*/
+    
+    padding: 2rem;
+    margin: 2rem;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    border: 0.1rem var(--c-PROYECTOS-POST) solid;
+
+    animation: fondoTexto 2s ease both;
+}
+@keyframes fondoTexto{
+    from{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+.fondoTexto__p{
+    font-family: var(--f-TITULAR-POST);             /* Color tipografía */
+    font-size: 2em;
+    text-align: center;
+}
+.carta{
+    width: 30%;
+    min-height: 60px;
+    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+
+    animation: carta 2s ease both;
+}
+@keyframes carta{
+    from{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+.carta__picture{
+    width: 250px;
+    min-height: 350px;
+
+    transition: all 5s ease;
+
+    transform-style: preserve-3d;
+}
+.carta__picture:hover{
+    transform: rotateY(180deg);
+}
+.cartaAnverso{
+  /*  background-color: blue;*/
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.cartaReverso{
+   /* background-color: blueviolet;*/
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+.sectionProceso{
+    width: 100%;
+    min-height: 720px;
+    background-color: white;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    border-bottom: 0.1rem solid var(--c-PROYECTOS-POST);
+    border-top: 0.1rem solid var(--c-PROYECTOS-POST);
+}
+.sectionProceso__div{
+    width: 100%;
+    min-height: 700px;
+  /*  background-color: lightsalmon;*/
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+.info{
+    width: 100%;
+    min-height: 100px;
+ /*   background-color: deeppink;*/
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.info__h5{
+    font-family: var(--f-TITULAR-POST);                 /* Color tipografía */
+    font-size: 12em;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: black;
+    text-decoration: underline var(--bg-PROYECTOS-POST);
+}
+.slider{
+    width: 70%;
+    min-height: 400px;
+    /*background-color: white;*/
+
+    margin: 5vh auto;
+    position: relative;
+
+    border: 0.1rem solid var(--c-PROYECTOS-POST);
+    border-radius: 2rem;
+}
+.slider__container{
+    width: 70%;
+  /*  background-color: rgb(6, 113, 136);*/
+    position: relative;
+    left: 10rem;
+    top: 11rem;
+}
+.slider__p{
+    width: 100%;
+    min-height: 10rem;
+  /*  background-color: grey;*/
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all .5s ease;
+
+    font-family: var(--f-TITULAR-POST);             /*Color tipografía*/
+    font-size: 1.5em;
+}
+.slider__p.isVisible{
+    opacity: 1;
+}
+.slider__p--static{
+    position: static;
+}
+.slider__arrow{
+    width: 3rem;
+    height: 3rem;
+    background-color: white;
+
+    position: absolute;
+    top: calc(50% - 1.5rem);
+}
+.next{
+    width: 40px;
+    min-height: 40px;
+   /* background-color: white;*/
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    left: 5rem;
+}
+.prev{
+    width: 40px;
+    min-height: 40px;
+  /*  background-color: white;*/
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    right: 5rem;
+}
+.acordeon{
+    width: 100%;
+    background-color: var(--bg-PROYECTOS-POST);         /*ColorFondo proyectos*/
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.acordeon__h6{
+    display: none;
+}
+.acordeon__proyectos{
+    width: 90%;
+    min-height: 10rem;
+ /*   background-color: blanchedalmond;*/
+    margin: 2rem auto;
+}
+.acordeon__ul{
+    min-height: 190px;
+  /*  background-color: lightpink;*/
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    bottom: 1rem;
+
+    gap: 10rem;
+}
+.acordeon__li{
+    background-color: white;
+
+    padding: 0.5rem;
+
+    border: 0.1rem black solid;
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.5em;
+}
+.acordeon__li.isActive{
+    background-color: var(--bg-PROYECTOS-POST);         /* FondoColor boton proyectos */
+}
+.acordeonMarca__info{
+   /* background-color: aqua;*/
+
+    position: relative;
+}
+.acordeonMarca__img{
+    width: 100%;
+    min-height: 10rem;
+  /*  background-color: indianred;*/
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all .5s ease;
+}
+.acordeonMarca__img.static{
+    position: static;
+}
+.acordeonMarca__img.isVisible{
+    opacity: 1;
+}
+.acordeonMarca__a{
+    width: 10%;
+    min-height: 40px;
+    background-color: white;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    left: 35rem;
+
+    border-radius: 2rem;
+
+    font-family: var(--f-TITULAR-POST);         /* Color tipografia titular*/
+    font-size: 1rem;
+    text-align: center;
+    font-weight: bold;
+}
+.sectionJugamos{
+    width: 100%;
+    min-height: 720px;
+    background-color: var(--bg-RESERVA-POST);       /* ColorFondo sección reserva */
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    border-top: 0.1rem black var(--c-PROYECTOS-POST);           /*Color borde superior*/
+}
+.sectionJugamos__h6{
+    display: none;
+}
+.sectionJugamos__info{
+    width: 90%;
+    min-height: 500px;
+  /*  background-color: yellow;*/
+
+    padding: 2rem;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+.sectionJugamos__acceso{
+    width: 80%;
+    min-height: 400px;
+   /* background-color: rgb(227, 153, 194);*/
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+.sectionJugamos__span{
+    width: 100%;
+    min-height: 400px;
+    background-color: var(--bg-RESERVA-POST);       /* ColorFondo sección reserva */    
+
+    padding: 1rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    font-family: var(--f-TITULAR-POST);             /* color tipografía */
+    font-size: 5.5em;
+    font-weight: bold;
+    text-decoration: underline var(--bg-PROYECTOS-POST);
+    text-align: center;
+    color: white;
+
+    border-radius: 4rem;
+}
+.sectionJugamos__button{
+    width: 20%;
+    min-height: 60px;
+    background-color: white;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 1rem;
+    border: 0.1rem solid var(--c-PROYECTOS-POST);
+}
+.sectionJugamos__button:hover{
+    background-color: var(--bg-PROYECTOS-POST);         /* colorFondo bton*/
+}
+.sectionJugamos__a:hover{
+    color: var(--bg-PROYECTOS-POST);                    /* ColorFondo letra bton*/
+}
+.sectionJugamos__a{
+    font-family: var(--f-TITULAR-POST);                 /* Color tipografía */
+    font-size: 2em;
+    text-transform: capitalize;
+    font-weight: bold;
+
+    position: relative;
+    bottom: 3rem;
+}
+.footer{
+    width: 100%;
+    min-height: 400px;
+  /*  background-color: coral;*/
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    border-top: 0.1rem solid var(--c-PROYECTOS-POST);       /* Color borde superior */
+}
+.footer__fondo{
+    width: 90%;
+    min-height: 400px;
+    background-color: white;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+.enlaces{
+    width: 40%;
+    min-height: 200px;
+  /*  background-color: deepskyblue;*/
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+}
+.nav{
+    width: 60%;
+    min-height: 100px;
+   /* background-color: darkseagreen;*/
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.nav__ul{
+    width: 100%;
+    min-height: 100px;
+
+    padding: 1rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    bottom: 2rem;
+
+    gap: 2rem;
+}
+.nav__a{
+    font-size: 0.8em;
+    font-weight: bold;
+}
+.enlaces__redes{
+    width: 15%;
+    min-height: 30px;
+  /*  background-color: darkseagreen;*/
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    bottom: 1rem;
+
+    gap: 2rem;
+}
+
+/*_____________ @media ________________*/
+/*  Descripción: Estilos para la visualización de la web en diferentes dispositivos.
+Movil, tablet, ordenadores en pantalla grande */
+
+@media (max-width:1440px){
+    .fondoSimbolo__titulo{
+        font-size: 2em;
+    }
+}
+@media (max-width:1280px){
+    .sectionServicios__div{
+        width: 100%;
+    }
+    .sectionServicios__info{
+        width: 100%;
+    }
+    .fondoSimbolo__titulo{
+        font-size: 2em;
+    }
+    .fondoSimbolo__parrafo{
+        font-size: 1em;
+    }
+    .sectionQuien{
+        width: 100%;
+    }
+    .sectionQuien__div{
+        width: 100%;
+    }
+    .sectionQuien__info{
+        width: 100%;
+    }
+    .sectionQuien__informa{
+        width: 100%;
+    }
+    .fondoTexto{
+        width: 90%;
+        min-height: 100px;
+    }
+    .sectionQuien__h4{
+        font-size: 8em;
+        padding: 3rem;
+    }
+    .fondoTexto__p{
+        font-size: 1.5em;
+        padding: 0.5rem;
+    }
+    .sectionProceso{
+        width: 100%;
+    }
+    .sectionProceso__div{
+        width: 100%;
+    }
+    .info{
+        width: 100%;
+    }
+    .info__h5{
+        font-size: 8em;
+    }
+    .slider{
+        width: 80%;
+    }
+    .slider__container{
+        width: 70%;
+        font-size: 1.1em;
+    }
+    .prev{
+        right: 7rem;
+    }
+    .acordeonMarca__a{
+        width: 20%;
+        font-size: 1.5em;
+    }
+    .sectionJugamos__span{
+        font-size: 5em;
+    }
+    .footer__fondo{
+        padding: 1rem;
+    }
+    .nav__ul{
+        width: 100%;
+    }
+    .nav__li{
+        font-size: 2em;
+    }
+    .enlaces__redes{
+        width: 25%;
+    }
+}
+@media (max-width:1152px){
+    .fondoSimbolo__titulo{
+        font-size: 1.9em;
+    }
+    .fondoSimbolo__titulo--pack{
+        font-size: 1.8em;
+    }
+    .prev{
+        right: 4rem;
+    }
+    .acordeonMarca__a{
+        left: 26rem;
+    }
+    .sectionJugamos__span{
+        font-size: 4.5em;
+    }
+    .footer__fondo{
+        width: 100%;
+        padding: 2rem;
+    }
+    .nav__ul{
+        width: 100%;
+    }
+    .nav__li{
+        width: 100%;
+        font-size: 1.5em;
+    }
+    .enlaces__redes{
+        width: 20%;
+    }
+}
+@media (max-width:1136px){
+    .fondoSimbolo__titulo{
+        font-size: 1.8em;
+    }
+    .fondoTexto{
+        width: 100%;
+    }
+    .fondoTexto__p{
+        font-size: 1.5em;
+    }
+    .slider{
+        width: 90%;
+    }
+    .acordeonMarca__a{
+        left: 30rem;
+    }
+    .sectionJugamos__span{
+        width: 90%;
+    }
+}
+@media (max-width:1024px){
+    .header__quienSoy{
+        right: 8rem;
+    }
+    .sectionServicios__h3{
+        font-size: 8em;
+    }
+    .fondoSimbolo__titulo{
+        font-size: 1.5em;
+    }
+    .sectionQuien__informa{
+        width: 100%;
+    }
+    .fondoTexto{
+        width: 100%;
+    }
+    .fondoTexto__p{
+        font-size: 1.2em;
+    }
+    .slider{
+        width: 90%;
+    }
+    .slider__container{
+        font-size: 1em;
+    }
+    .prev{
+        right: 4.5rem;
+    }
+    .acordeon__proyectos{
+        width: 100%;
+    }
+    .acordeon__ul{
+        gap: 6rem;
+    }
+    .acordeonMarca__a{
+        width: 25%;
+        font-size: 1.5em;
+        left: 25rem;
+    }
+    .sectionJugamos__acceso{
+        width: 100%;
+    }
+    .sectionJugamos__span{
+        font-size: 4em
+    }
+    .footer__fondo{
+        width: 100%;
+        padding: 2rem;
+        gap: 2rem;
+    }
+    .nav__li{
+        font-size: 1.5em;
+        text-transform: capitalize;
+    }
+    .enlaces__redes{
+        width: 20%;
+    }
+}
+@media (max-width:960px){
+    .header{
+        width: 100%;
+    }
+    .header__cabecera{
+        width: 100%;
+    }
+    .header__quienSoy{
+        right: 8rem;
+    }
+    .fondoSimbolo__titulo{
+        font-size: 1.4em;
+    }
+    .sectionQuien{
+        width: 100%;
+    }
+    .sectionQuien__div{
+        width: 100%;
+    }
+    .sectionQuien__h4{
+        font-size: 6em;
+    }
+    .sectionQuien__informa{
+        width: 100%;
+    }
+    .fondoTexto{
+        width: 100%;
+        font-size: 0.8em;
+    }
+    .slider{
+        width: 90%;
+    }
+    .slider__container{
+        font-size: 0.8em;
+        left: 8.5rem;
+    }
+    .acordeon__proyectos{
+        width: 100%;
+    }
+    .acordeonMarca{
+        width: 100%;
+    }
+    .acordeonMarca__a{
+        left: 26rem;
+    }
+    .sectionJugamos__info{
+        width: 100%;
+    }
+}
+@media (max-width:900px){
+    .fondoSimbolo__titulo--pack{
+        font-size: 1.3em;
+    }
+    .acordeonMarca__a{
+        left: 20rem;
+    }
+    .nav{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (max-width:896px){
+    .fondoSimbolo__titulo{
+        font-size: 1.2em;
+    }
+    .prev{
+        right: 5rem;
+    }
+}
+@media (max-width:853px){
+    .prev{
+        right: 3rem;
+    }
+    .acordeonMarca__a{
+        left: 20rem;
+    }
+}
+@media (max-width:844px){
+    .slider__container{
+        width: 68%;
+    }
+    .prev{
+        right:5rem;
+    }
+    .sectionJugamos__span{
+        width: 100%;
+    }
+    .enlaces__redes{
+        width: 20%;
+    }
+}
+@media (max-width:824px){
+    .fondoSimbolo__titulo{
+        font-size: 1.1em;
+    }
+    .sectionQuien{
+        width: 100%;
+    }
+    .sectionQuien__informa{
+        flex-direction: column;
+    }
+    .fondoTexto{
+        width: 80%;
+        font-size: 1em
+    }
+    .prev{
+        right:3.5rem;
+    }
+    .acordeon__ul{
+        gap: 8rem;
+    }
+}
+@media (max-width:820px){
+    .header{
+        width: 100%;
+    }
+    .sectionProceso{
+        width: 100%;
+    }
+    .slider{
+        width: 95%;
+    }
+    .slider__container{
+        width: 70%;
+        font-size: 1.2em;
+        left: 7rem;
+        top: 10rem;
+    }
+    .next{
+        left: 3rem;
+    }
+    .prev{
+        right: 3rem;
+    }
+    .acordeon{
+        width: 100%;
+    }
+    .acordeonMarca__a{
+        width: 20%;
+        left: 20rem;
+    }
+    .acordeon__ul{
+        gap: 4rem;
+    }
+    .footer__fondo{
+        width: 100%;
+    }
+    .nav{
+        width: 100%;
+    }
+    .nav__li{
+        font-size: 1.5em;
+        text-transform: capitalize;
+    }
+}
+@media (max-width:801px){
+    .sectionQuien__informa{
+        flex-direction: column;
+    }
+    .fondoTexto{
+        width: 80%;
+    }
+    .slider{
+        width: 95%;
+    }
+    .slider__container{
+        width: 80%;
+        font-size: 1em;
+        left: 5rem;
+    }
+    .next{
+        left: 1rem;
+    }
+    .prev{
+        right: 1rem;
+    }
+    .acordeon__ul{
+        gap: 8rem;
+    }
+    .acordeonMarca__a{
+        width: 20%;
+        left: 20rem;
+    }
+    .sectionJugamos__button{
+        width: 30%;
+    }
+    .enlaces{
+        width: 60%;
+    }
+    .nav{
+        width: 100%;
+    }
+    .nav__ul{
+        width: 100%;
+    }
+    .nav__li{
+        font-size: 1.5em;
+        text-transform: capitalize;
+    }
+    .enlaces__picture{
+        width: 100%;
+    }
+    .enlaces__redes{
+        width: 35%;
+        gap: 4rem;
+    }
+}
+@media (max-width:768px){
+    .fondoSimbolo__titulo{
+        font-size: 1em;
+    }
+    .next{
+        left: 3rem;
+    }
+    .slider__container{
+        left: 6rem;
+        font-size: 0.9em;
+    }
+    .acordeon__ul{
+        gap: 4rem;
+    }
+    .acordeon__li{
+        text-transform: capitalize;
+    }
+    .acordeonMarca__a{
+        width: 30%;
+        left: 17rem;
+    }
+    .sectionJugamos__span{
+        width: 85%;
+    }
+}
+@media (max-width:745px){
+    .sectionServicios__info{
+        flex-direction: column;
+
+        padding: 3rem;
+    }
+    .fondoSimbolo__titulo{
+        font-size: 3em;
+        padding: 3.5rem;
+    }
+    .fondoSimbolo__parrafo{
+        font-size: 1.8em;
+
+        padding: 3.5rem;
+    }
+    .next{
+        left: 1rem;
+    }
+    .slider__container{
+        left: 4.5rem;
+        bottom: 0.5rem;
+    }
+    .acordeon__ul{
+        gap: 3rem;
+    }
+    .acordeonMarca__a{
+        left: 20rem;
+    }
+    .sectionJugamos__a{
+        font-size: 1.8em;
+    }
+    .footer__fondo{
+        width: 100%;
+    }
+    .enlaces__picture{
+        width: 40%;
+    }
+    .nav{
+        width: 100%;
+    }
+    .enlaces__redes{
+        width: 40%;
+    }
+}
+@media (max-width:740px){
+    .slider{
+        width: 95%;
+    }
+    .slider__container{
+        width: 80%;
+        left: 5rem;
+    }
+    .next{
+        left: 1rem;
+    }
+}
+@media (max-width:736px){
+    .slider{
+        width: 95%;
+    }
+    .slider__container{
+        width: 80%;
+        left: 5rem;
+    }
+    .next{
+        left: 1rem;
+    }
+}
+@media (max-width:720px){
+    .fondoSimbolo__titulo{
+        width: 95%;
+        font-size: 2.5em;
+        padding: 4rem;
+    }
+    .fondoSimbolo__parrafo{
+        width: 100%;
+        line-height: 2.2rem;
+    }
+    .slider__container{
+        left: 4.5rem;
+    }
+}
+@media (max-width:712px){
+    .sectionJugamos__acceso{
+        width: 100%;
+    }
+    .sectionJugamos__span{
+        font-size: 4.5em;
+    }
+    .acordeonMarca__a{
+        width: 20%;
+        right: 2rem;
+    }
+    .enlaces__picture{
+        width: 80%;
+    }
+    .nav__li{
+        font-size: 2em;
+    }
+    .enlaces__redes{
+        width: 40%;
+    }
+}
+@media (max-width:711px){
+    .sectionJugamos__span{
+        font-size: 4em;
+    }
+    .enlaces{
+        width: 80%;
+    }
+    .nav__ul{
+        font-size: 0.8em;
+    }
+}
+@media (max-width:700px){
+    .header__servicios{
+        width: 15%;
+        left: 3rem;
+    }
+    .header__a{
+        font-size: 1em;
+    }
+    .logo{
+        width: 45%;
+        top: 10rem;
+    }
+    .header__proyectos{
+        width: 20%;
+    }
+    .header__aProyectos{
+        font-size: 1em;
+    }
+    .header__proceso{
+        width: 20%;
+    }
+    .header__enlace{
+        font-size: 1em;
+    }
+    .header__aProceso{
+        font-size: 1em;
+    }
+    .fondoSimbolo__titulo{
+        font-size: 2.5em;
+    }
+    .acordeonMarca__a{
+        top: 1rem;
+    }
+    .sectionJugamos__acceso{
+        width: 100%;
+    }
+    .sectionJugamos__span{
+        font-size: 4em;
+    }
+}
+@media (max-width:684px){
+    .fondoSimbolo__titulo--pack{
+        font-size: 2.4em;
+    }
+}
+@media (max-width:680px){
+    .fondoSimbolo__titulo--pack{
+        font-size: 2.4em;
+    }
+}
+@media (max-width:675px){
+    .fondoSimbolo__titulo--pack{
+        font-size: 2.3em;
+    }    
+}
+@media (max-width:671px){
+    .fondoSimbolo__titulo{
+        font-size: 2.5em;
+    }
+    .fondoSimbolo__parrafo{
+        padding: 4rem;
+    }
+    .fondoSimbolo__titulo--pack{
+        font-size: 2.3em;
+    }
+    .slider{
+        min-height: 100px;
+
+        bottom: 5rem;
+    }
+    .slider__container{
+        width: 70%;
+        left: 6rem;
+        font-size: 0.7em;
+
+        top: 4rem;
+    }
+    .next{
+        left: 2rem;
+    }
+    .prev{
+        right: 2rem;
+    }
+    .acordeon__ul{
+        gap: 3rem;
+    }
+    .sectionJugamos__span{
+        font-size: 4em;
+    }
+    .sectionJugamos__button{
+        width: 25%;
+    }
+    .sectionJugamos__a{
+        font-size: 1.7em
+    }
+}
+@media (max-width:667px){
+    .fondoSimbolo__titulo{
+        font-size: 2.4em;
+    }
+    .fondoSimbolo__titulo--pack{
+        font-size: 2.2em;
+    }
+}
+@media (max-width:656px){
+    .fondoSimbolo__titulo{
+        font-size: 2.2em;
+    }
+}
+@media (max-width:654px){
+    .fondoSimbolo__titulo--pack{
+        font-size: 2em;
+    }
+}
+@media (max-width:644px){
+    .sectionJugamos__span{
+        font-size: 3.5em;
+    }
+    .fondoSimbolo__titulo--pack{
+        font-size: 2em;
+    }
+}
+@media (max-width:640px){
+    .fondoSimbolo__titulo{
+        font-size: 3em;
+        padding: 1rem;
+    }
+    .fondoSimbolo__parrafo{
+        width: 95%;
+        font-size: 1.4rem;
+        padding: 1rem;
+        line-height: 1.8rem;
+    }
+    .fondoSimbolo__parrafo--identidad{
+        font-size: 1.2em;
+        padding: 0.2rem;
+    }
+    .fondoSimbolo__parrafo--maquetacion{
+        font-size: 1.2rem;
+        padding: 0.2rem;
+    }
+    .fondoTexto{
+        width: 80%;
+        font-size: 0.8em;
+    }
+    .slider__container{
+        width: 75%;
+        left: 5.5rem;
+    }
+    .sectionJugamos__span{
+        font-size: 3.5em;
+    }
+    .nav__ul{
+        font-size: 0.8em;
+    }
+}
+@media (max-width:636px){
+    .fondoSimbolo__titulo--pack{
+        font-size: 2.5em;
+    }
+}
+@media (max-width:631px){
+    .fondoSimbolo__titulo--pack{
+        font-size: 2.8em;
+    }
+    .prev{
+        right: 1rem;
+    }
+}
+@media (max-width:620px){
+    .fondoSimbolo__titulo{
+        width: 100%;
+        padding: 3rem;
+        font-size: 2.5em;
+    }
+    .fondoSimbolo__parrafo{
+        width: 100%;
+        font-size: 1.2em;
+        line-height: 1.8rem;
+    }
+    .fondoSimbolo__titulo--pack{
+        width: 100%;
+        padding: 1.5rem;
+    }
+}
+@media (max-width:616px){
+    .fondoSimbolo__titulo{
+        font-size: 2.4em;
+        padding: 2rem;
+    }
+    .sectionQuien__h4{
+        font-size: 5em;
+    }
+}
+@media (max-width:600px){
+    .header__quienSoy{
+        right: 5rem;
+        top: 8rem;
+    }
+    .sectionServicios__h3{
+        font-size: 7em;
+        padding: 2rem;
+    }
+    .fondoSimbolo__parrafo{
+        line-height: 1.5rem;
+    }
+    .fondoSimbolo__titulo--pack{
+        font-size: 2.4em;
+    }
+    .sectionQuien__h4{
+        font-size: 5em;
+    }
+    .slider__container{
+        width: 75%;
+        left: 5rem;
+    }
+    .next{
+        left: 1rem;
+    }
+    .acordeonMarca__a{
+        width: 20%;
+        left: 15rem;
+    }
+    .sectionJugamos__span{
+        font-size: 3.5em;
+    }
+    .enlaces__picture{
+        width:60%;
+    }
+    .footer__fondo{
+        padding: 0.5rem;
+    }
+    .nav__ul{
+        font-size: 0.8em;
+    }
+    .enlaces__redes{
+        width: 40%;
+    }
+}
+@media (max-width:592px){
+    .fondoSimbolo__titulo--pack{
+        font-size: 2.3em;
+    } 
+}
+@media (max-width:581px){
+    .fondoSimbolo__titulo--pack{
+        font-size: 2em;
+    }
+}
+@media (max-width:576px){
+    .sectionJugamos__span{
+        font-size: 3.5em;
+    }
+    .nav__ul{
+        width: 90%;
+        font-size: 0.7em;
+    }
+    .slider__container{
+        left: 4rem;
+    }
+}
+@media (max-width:574px){
+    .fondoSimbolo__titulo{
+        font-size: 2.3em;
+    }
+    .fondoSimbolo__titulo--pack{
+        font-size: 2.2em;
+    }
+    .acordeon__ul{
+        gap: 1.5em;
+    }
+    .sectionJugamos__span{
+        font-size: 3em;
+    }
+    .nav__ul{
+        width: 100%;
+        font-size: 0.7em;
+        text-align: center;
+    }
+    .slider__container{
+        left: 4rem;
+    }
+}
+@media (max-width:572px){
+    .fondoSimbolo__titulo--pack{
+        font-size: 2em;
+    }
+}
+@media (max-width:563px){
+    .sectionJugamos__span{
+        font-size: 3.5em;
+    }    
+}
+@media (max-width:568px){
+    .sectionServicios__info{
+        padding: 2rem;
+    }
+    .fondoSimbolo__titulo{
+        width: 85%;
+    }
+    .fondoSimbolo__parrafo{
+        width: 80%;
+        font-size: 1.2em;
+    }
+    .fondoSimbolo__titulo--pack{
+        font-size: 2.5em;
+    }
+    .acordeon__li{
+        font-size: 1.2em;
+    }
+    .sectionJugamos__span{
+        width: 100%;
+    }
+    .nav{
+        width: 100%;
+    }
+    .nav__ul{
+        width: 100%;
+        gap: 1rem;
+    }
+}
+@media (max-width:560px){
+    .fondoSimbolo__titulo--pack{
+        font-size: 2.3em;
+    }    
+}
+@media (max-width:540px){
+    .header__enlace{
+        font-size: 0.9em;
+        text-transform: capitalize;
+    }
+    .fondoSimbolo__titulo--pack{
+        font-size: 2em;
+    }
+    .sectionQuien__informa{
+        width: 90%;
+    }
+    .fondoSimbolo__parrafo{
+        font-size: 1em;
+    }
+    .fondoSimbolo__titulo{
+        font-size: 2.2em;
+    }
+    .fondoSimbolo__parrafo--identidad{
+        font-size: 1em;
+        padding: 0.5rem;
+    }
+    .fondoSimbolo__parrafo--packaging{
+        font-size: 1em;
+        padding: 0.4rem;
+    }
+    .slider__container{
+        width: 70%;
+        font-size: 0.7em;
+        left: 5rem;
+    }
+    .next{
+        left: 1.5rem;
+    }
+    .sectionJugamos__span{
+        width: 100%;
+    }
+    .sectionJugamos__button{
+        width: 40%;
+    }
+    .nav__li{
+        font-size: 1.8em;
+    }
+    .enlaces__redes{
+        width: 50%;
+    }
+}
+@media (max-width:526px){
+    .sectionQuien__h4{
+        font-size: 4em;
+    }
+}
+@media (max-width:524px){
+    .fondoSimbolo__titulo--pack{
+        font-size: 2.1em;
+    }
+}
+@media (max-width:520px){
+    .fondoSimbolo__titulo--pack{
+        font-size: 2em;
+    }
+}
+@media (max-width:510px){
+    .header__agenda{
+        width: 20%;
+    }
+    .header__quienSoy{
+        width: 20%;
+    }
+    .fondoSimbolo__titulo{
+        font-size: 2em;
+    }
+}
+@media (max-width:502px){
+    .fondoSimbolo__titulo--pack{
+        font-size: 1.9em;
+    }    
+}
+@media (max-width:500px){
+    .header__agenda{
+        width: 20%;
+    }
+    .header__quienSoy{
+        width: 20%;
+        right: 4rem;
+    }
+    .fondoSimbolo__titulo{
+        font-size: 1.8em;
+    }
+    .fondoSimbolo__parrafo{
+        font-size: 0.9em;
+    }
+    .fondoSimbolo__parrafo--identidad{
+        font-size: 0.9em;
+    }
+    .fondoSimbolo__titulo--pack{
+        font-size: 1.7em;
+    }
+    .fondoSimbolo__parrafo--packaging{
+        font-size: 0.9em;
+    }
+    .sectionQuien__h4{
+        font-size: 4em;
+    }
+    .info__h5{
+        font-size: 7em;
+    }
+    .slider__container{
+        font-size: 0.7em;
+        top: 3.5rem;
+        left: 4.5rem;
+    }
+    .prev{
+        right: 1rem;
+    }
+    .next{
+        left: 1rem;
+    }
+    .acordeon__ul{
+        gap: 2rem;
+    }
+    .acordeonMarca__a{
+        left: 12rem;
+    }
+}
+@media (max-width:496px){
+    .sectionJugamos__span{
+        font-size: 3em;
+    }
+}
+@media (max-width:492px){
+    .sectionServicios__h3{
+        font-size: 6em;
+    }
+    .nav__ul{
+        gap: 0.5rem;
+    }
+}
+@media (max-width:480px){
+    .header__servicios{
+        width: 25%;
+    }
+    .header__proyectos{
+        width: 30%;
+    }
+    .header__agenda{
+        width: 30%;
+        right: 1rem;
+    }
+    .logo{
+        top: 6rem;
+    }
+    .header__quienSoy{
+        width: 25%;
+        right: 1rem;
+    }
+    .header__proceso{
+        width: 30%;
+    }
+    .sectionServicios__h3{
+        font-size: 6em;
+    }
+    .fondoSimbolo__parrafo{
+        padding: 0.4rem;
+    }
+    .fondoSimbolo__titulo{
+        font-size: 1.9em;
+    }
+    .fondoSimbolo__parrafo--identidad{
+        padding: 1rem;
+    }
+    .fondoSimbolo__parrafo--maquetacion{
+        padding: 0.7rem;
+    }
+    .fondoSimbolo__titulo--pack{
+        font-size: 1.8em;
+    }
+    .fondoSimbolo__parrafo--packaging{
+        padding: 0.4rem;
+    }
+    .acordeonMarca__a{
+        width: 30%;
+        font-size: 1.2em;
+    }
+    .acordeon__ul{
+        gap: 2rem;
+    }
+    .acordeon__li{
+        font-size: 1rem;
+    }
+    .sectionJugamos__span{
+        font-size: 2.7em;
+    }
+    .enlaces__picture{
+        width: 50%;
+    }
+    .nav__ul{
+        font-size: 1em;
+        text-align: center;
+    }
+    .nav__li{
+        font-size: 1.2em;
+    }
+    .enlaces__redes{
+        width: 35%;
+        gap: 2rem;
+    }
+}
+@media (max-width:479px){
+    .fondoSimbolo__titulo--pack{
+        font-size: 1.7em;
+    }
+}
+@media (max-width:472px){
+    .fondoSimbolo__titulo{
+        font-size: 1.8em;
+    }
+    .fondoSimbolo__titulo--pack{
+        font-size: 1.7em;
+    }
+}
+@media (max-width:468px){
+    .fondoSimbolo__titulo--pack{
+        font-size: 1.6em;
+    }
+}
+@media (max-width:460px){
+    .sectionServicios__info{
+        padding: 2rem;
+    }
+    .fondoSimbolo__parrafo{
+        width: 85%;
+    }
+    .fondoSimbolo__parrafo--identidad{
+        width: 90%;
+    }
+    .fondoSimbolo__titulo{
+        width: 100%;
+        font-size: 2em;
+    }
+    .sectionJugamos__span{
+        width: 95%;
+        font-size: 2.5em;
+    }
+}
+@media (max-width:456px){
+    .fondoSimbolo__titulo--pack{
+        font-size: 1.9em;
+    }
+}
+@media (max-width:450px){
+    .slider__container{
+        left: 4rem;
+    }
+}
+@media (max-width:447px){
+    .fondoSimbolo__titulo--pack{
+        font-size: 1.8em;
+    }
+    .slider__container{
+        left: 4rem;
+    }
+}
+@media (max-width:440px){
+    .fondoSimbolo__titulo{
+        font-size: 1.8em;
+    }
+    .sectionQuien__h4{
+        font-size: 3.5em;
+    }
+    .nav__ul{
+        padding: 0.5rem;
+    }
+}
+@media (max-width:436px){
+    .header__quienSoy{
+        width: 30%;
+    }
+    .fondoSimbolo__titulo--pack{
+        font-size: 1.7em;
+    }
+}
+@media (max-width:432px){
+    .header__servicios{
+        width: 30%;
+    }
+    .header__quienSoy{
+        width: 40%;
+    }
+    .header__agenda{
+        width: 30%;
+    }
+    .header__proceso{
+        width: 35%;
+    }
+    .sectionServicios__h3{
+        font-size: 5em;
+    }
+    .sectionServicios__info{
+        padding: 1.5rem;
+    }
+    .fondoSimbolo__titulo{
+        font-size: 2em;
+    }
+    .fondoSimbolo__parrafo{
+        font-size: 1em;
+        padding: 1rem;
+    }
+    .fondoSimbolo__parrafo--maquetacion{
+        font-size: 1em;
+        padding: 1rem;
+    }
+    .fondoSimbolo__parrafo--identidad{
+        font-size: 1em;
+        padding: 1rem;
+    }
+    .fondoSimbolo__titulo--pack{
+        font-size: 2em;
+    }
+    .fondoSimbolo__parrafo--packaging{
+        font-size: 1em;
+        padding: 1rem;
+    }
+    .sectionQuien__h4{
+        font-size: 3.5em;
+    }
+    .sectionQuien__informa{
+        width: 95%;
+    }
+    .slider__container{
+        left: 4rem;
+        font-size: 0.6em;
+    }
+    .acordeonMarca__a{
+        width: 40%;
+        left: 8rem;
+    }
+    .info__h5{
+        font-size: 6em;
+    }
+    .sectionJugamos__span{
+        font-size: 2.5em;
+    }
+    .sectionJugamos__button{
+        width: 40%;
+    }
+    .enlaces__picture{
+        width: 80%;
+    }
+    .nav__ul{
+        gap: 1rem;
+    }
+    .enlaces__redes{
+        width: 40%;
+    }
+}
+@media (max-width:423px){
+    .header__agenda{
+        width: 35%;
+    }
+    .fondoSimbolo__titulo{
+        width: 100%;
+        padding: 1.3rem;
+        font-size: 1em;
+    }
+    .fondoSimbolo__parrafo{
+        width: 100%;
+    }
+    .fondoSimbolo__titulo--pack{
+        width: 100%;
+        padding: 1rem;
+    }
+}
+@media (max-width:423px){
+    .sectionServicios__info{
+        padding: 2rem;
+    }
+    .fondoSimbolo__titulo{
+        font-size: 2em;
+    }
+    .fondoSimbolo__titulo--pack{
+        font-size: 1.9em;
+    }
+}
+@media (max-width:420px){
+    .fondoSimbolo__titulo{
+        font-size: 1.8em;
+    }    
+}
+@media (max-width:416px){
+    .header__agenda{
+        font-size: 0.8em;
+    }
+    .fondoSimbolo__titulo{
+        font-size: 1.9em
+    }
+    .fondoSimbolo__titulo--pack{
+        font-size: 1.7em;
+    }
+    .fondoSimbolo__parrafo--identidad{
+        padding: 0.2rem;
+    }
+    .fondoTexto__p{
+        font-size: 1.1em;
+        line-height: 1.2rem;
+    }
+    .sectionServicios__info{
+        padding: 2rem;
+    }
+    .fondoTexto{
+        padding: 1rem;
+    }
+    .info__h5{
+        font-size: 6em;
+    }
+    .slider__container{
+        font-size: 0.6em;
+    }
+    .prev{
+        right: 0.5rem;
+    }
+    .next{
+        left: 0.5rem;
+    }
+    .acordeon__ul{
+        gap: 1rem;
+    }
+    .acordeonMarca__a{
+        width: 40%;
+        left: 8rem;
+    }
+    .sectionJugamos__span{
+        font-size: 3em;
+    }
+    .enlaces__picture{
+        width: 70%;
+    }
+    .nav__li{
+        font-size: 1.2em;
+    }
+    .enlaces__redes{
+        width: 40%;
+    }
+}
+@media (max-width:412px){
+    .header__agenda{
+        font-size: 0.8em;
+    }
+    .fondoSimbolo__titulo{
+        font-size: 1.8em;
+    }
+    .fondoSimbolo__titulo--pack{
+        font-size: 1.7em;
+    }
+    .fondoSimbolo__parrafo--identidad{
+        padding: 0.2rem;
+    }
+    .acordeonMarca__a{
+        width: 40%;
+        left: 8rem;
+    }
+    .sectionJugamos__span{
+        font-size: 3em;
+    }
+    .enlaces__picture{
+        width: 70%;
+    }
+    .nav__li{
+        font-size: 1em;
+        text-transform: capitalize;
+    }
+    .enlaces__redes{
+        width: 40%;
+    }
+}
+@media (max-width:402px){
+    .sectionServicios__h3{
+        font-size: 5em;
+    }
+    .sectionServicios__info{
+        padding: 2rem;
+    }
+    .fondoSimbolo__titulo{
+        font-size: 1.7em;
+    }
+    .fondoSimbolo__parrafo{
+        width: 95%;
+        line-height: 1.5rem;
+    }
+    .fondoSimbolo__titulo--pack{
+        font-size: 1.7em;
+    }
+}
+@media (max-width:396px){
+    .fondoSimbolo__titulo{
+        font-size: 1.5em;
+    }
+    .sectionQuien__h4{
+        font-size: 3em;
+    }
+    .slider__container{
+        left: 4rem;
+    }
+    .sectionJugamos__span{
+        width: 100%;
+        font-size: 2.5em;
+    }
+    .nav__li{
+        font-size: 1.2em;
+    }
+}
+@media (max-width:390px){
+    .fondoSimbolo__titulo--pack{
+        font-size: 1.6em;
+    }
+    .slider__container{
+        width: 75%;
+        left: 3rem;
+    }
+    .next{
+        width: 8%;
+    }
+    .prev{
+        width: 8%;
+    }
+}
+@media (max-width:387px){
+    .header__agenda{
+        font-size: 0.8em;
+    }
+    .acordeonMarca__a{
+        width: 30%;
+        left: 8rem;
+        font-size: 1em;
+    }
+    .sectionJugamos__button{
+        width: 50%;
+    }
+    .enlaces__picture{
+        width: 60%;
+    }
+    .nav__li{
+        font-size: 1em;
+        text-transform: capitalize;
+    }
+    .enlaces__redes{
+        width: 40%;
+        gap: 1.5rem;
+    }
+    .fondoSimbolo__titulo--pack{
+        font-size: 1.5em;
+    }
+    .sectionJugamos__span{
+        font-size: 2.5em;
+    }
+    .enlaces__picture{
+        width:80%;
+    }
+    .nav__ul{
+        font-size: 0.9em;
+    }
+    .enlaces__redes{
+        width: 40%;
+    }
+}
+@media (max-width:380px){
+    .sectionJugamos__span{
+        width: 100%;
+        font-size: 2.3em;
+    }
+    .nav__li{
+        font-size: 1.2em
+    }
+}
+@media (max-width:375px){
+    .header__servicios{
+        width: 50%;
+    }
+    .header__proyectos{
+        width: 50%;
+    }
+    .header__aProyectos{
+        font-size: 0.8em;
+    }
+    .header__agenda{
+        width: 50%;
+    }
+    .header__a{
+        font-size: 0.8em;
+    }
+    .header__quienSoy{
+        width: 60%;
+    }
+    .header__enlace{
+        font-size: 0.8em;
+    }
+    .header__proceso{
+        width: 50%;
+    }
+    .logo{
+        width: 50%;
+    }
+    .sectionServicios__info{
+        padding: 2rem;
+    }
+    .fondoSimbolo__titulo{
+        font-size: 1.5em;
+        line-height: 1.5rem;
+    }
+    .fondoSimbolo__titulo--pack{
+        font-size: 1.3em;
+    }
+    .acordeon__ul{
+        gap: 1rem;
+    }
+    .acordeon__li{
+        font-size: 0.8em;
+    }
+    .sectionJugamos__acceso{
+        width: 100%;
+    }
+    .sectionJugamos__span{
+        font-size: 2.5em;
+    }
+    .nav__ul{
+        gap: 1rem;
+        font-size: 1em;
+    }
+    .enlaces__redes{
+        width: 40%;
+    }
+}
+@media (max-width:374px){
+    .fondoSimbolo__titulo{
+        font-size: 1.4em;
+    }
+}
+@media (max-width:371px){
+    .sectionServicios__h3{
+        font-size: 4em;
+    }
+    .fondoSimbolo__titulo{
+        font-size: 1.4em;
+    }
+    .sectionJugamos__span{
+        width: 100%;
+        font-size: 2em;
+    }
+    .nav{
+        width: 100%;
+    }
+    .nav__ul{
+        width: 100%;
+        gap: 0.5rem;
+    }
+}
+@media (max-width:364px){
+    .fondoSimbolo__titulo{
+        font-size: 1.3em;
+    }    
+}
+@media (max-width:360px){
+    .sectionServicios__h3{
+        font-size: 4em
+    }
+    .sectionServicios__info{
+        padding: 1.5rem;
+    }
+    .fondoSimbolo__titulo{
+        width: 85%;
+        font-size: 1.5em;
+        line-height: 1.5rem;
+    }
+    .fondoSimbolo__parrafo{
+        width: 90%;
+    }
+    .fondoSimbolo__parrafo--identidad{
+        width: 90%;
+    }
+    .info__h5{
+        font-size: 5em;
+    }
+    .acordeonMarca__a{
+        width: 30%;
+        font-size: 1em;
+    }
+    .sectionJugamos__span{
+        font-size: 2em;
+    }
+    .enlaces__picture{
+        width:80%;
+    }
+    .footer__fondo{
+        padding: 0.5rem;
+    }
+    .nav__ul{
+        font-size: 1em;
+    }
+    .enlaces__redes{
+        width: 40%;
+    }
+}
+@media (max-width:359px){
+    .fondoSimbolo__titulo--pack{
+        font-size: 1.3em;
+    }    
+}
+@media (max-width:356px){
+    .sectionServicios__h3{
+        font-size: 4.5em;
+    }
+    .fondoSimbolo__titulo{
+        width: 100%;
+        font-size: 1.5em;
+    }
+    .fondoSimbolo__parrafo--identidad{
+        width: 85%;
+    }
+    .fondoSimbolo__titulo--pack{
+        font-size: 1.5em;
+    }
+    .fondoSimbolo__parrafo--packaging{
+        width: 100%;
+    }
+    .sectionQuien__h4{
+        font-size: 2.9em;
+    }
+}
+@media (max-width:351px){
+    .nav{
+        width: 100%;
+    }
+    .nav__ul{
+        width: 100%;
+        gap: 0.5rem;
+    }
+    .nav__li{
+        font-size: 0.8em;
+    }
+}
+@media (max-width:346px){
+    .fondoSimbolo__titulo{
+        font-size: 1.5em;
+    }
+    .sectionQuien__h4{
+        font-size: 2.5em;
+    }
+    .sectionJugamos__info{
+        width: 100%;
+    }
+    .sectionJugamos__acceso{
+        width: 100%;
+    }
+    .sectionJugamos__span{
+        font-size: 2em;
+    }
+    .enlaces__picture{
+        width: 70%;
+    }
+    .nav{
+        width: 100%;
+    }
+    .nav__ul{
+        width: 100%;
+    }
+    .nav__li{
+        font-size: 0.9em;
+    }
+}
+@media (max-width:336px){
+    .sectionServicios__h3{
+        font-size: 4em;
+    }
+}
+@media (max-width:332px){
+    .slider__container{
+        left: 2.5rem;
+    }
+    .nav{
+        width: 100%;
+    }
+    .nav__ul{
+        width: 100%;
+        font-size: 0.8rem;
+        gap: 1rem;
+    }
+}
+@media (max-width:327px){
+    .fondoSimbolo__titulo{
+        font-size: 1.3em;
+    }
+    .fondoSimbolo__titulo--pack{
+        font-size: 1.3em;
+    }
+    .sectionJugamos__span{
+        width: 100%;
+        font-size: 2.5em;
+    }
+    .nav{
+        width: 100%;
+    }
+    .nav__ul{
+        width: 100%;
+        gap: 0.5rem;
+        font-size: 0.8em;
+    }
+}
+@media (max-width:320px){
+    .sectionServicios__h3{
+        font-size: 4em;
+    }
+    .fondoSimbolo__titulo{
+        font-size: 1.2em;
+    }
+    .fondoSimbolo__titulo--pack{
+        font-size: 1.1em;
+    }
+    .fondoSimbolo__parrafo--packaging{
+        width: 90%;
+    }
+    .sectionQuien__h4{
+        font-size: 2.5em;
+    }
+    .slider__container{
+        left: 2.5rem;
+    }
+    .acordeonMarca__a{
+        left: 8rem;
+    }
+    .sectionJugamos__acceso{
+        width: 100%;
+    }
+    .sectionJugamos__span{
+        font-size: 1.8em;
+    }
+    .sectionJugamos__button{
+        width: 50%;
+    }
+    .enlaces__picture{
+        width: 70%;
+    }
+    .nav__ul{
+        font-size: 0.9em;
+        text-transform: capitalize;
+    }
+}
+@media (max-width:316px){
+    .acordeon__ul{
+        gap: 0.5rem;
+    }
+}
+@media (max-width:311px){
+    .sectionQuien__h4{
+        font-size: 2em;
+    }
+}
+@media (max-width:306px){
+    .sectionServicios__titular{
+        font-size: 0.9em;
+    }
+}
+@media (max-width:300px){
+    .header__servicios{
+        width: 150%;
+    }
+    .header__quienSoy{
+        width: 200%;
+    }
+    .header__proceso{
+        width: 150%;
+    }
+    .header__proyectos{
+        width: 150%;
+    }
+    .header__agenda{
+        width: 180%;
+    }
+    .logo{
+        width: 65%;
+    }
+    .sectionServicios__h3{
+        font-size: 3.5em;
+    }
+    .sectionServicios__info{
+        padding: 1rem;
+    }
+    .fondoSimbolo__parrafo{
+        width: 90%;
+    }
+    .fondoSimbolo__parrafo--identidad{
+        width: 75%;
+    }
+    .fondoSimbolo__titulo{
+        font-size: 1.5em;
+    }
+    .fondoSimbolo__parrafo--packaging{
+        width: 85%;
+    }
+    .sectionQuien__h4{
+        font-size: 2.3em;
+    }
+    .info__h5{
+        font-size: 4em;
+    }
+    .slider__container{
+        width: 75%;
+        font-size: 0.5em;
+        left: 2.2rem;
+    }
+    .acordeon__ul{
+        gap: 1rem;
+    }
+    .acordeon__li{
+        font-size: 0.6em;
+    }
+    .acordeonMarca__a{
+        width: 30%;
+        left: 7rem;
+    }
+    .sectionJugamos__acceso{
+        width: 100%;
+    }
+    .sectionJugamos__span{
+        width: 100%;
+        font-size: 1.7em;
+    }
+    .sectionJugamos__button{
+        width: 60%;
+    }
+    .nav{
+        width: 100%;
+    }
+    .nav__ul{
+        width: 100%;
+    }
+    .nav__li{
+        font-size: 0.9em;
+    }
+}
+@media (max-width:296px){
+    .marquesina__div{
+        font-size: 2.5em;
+    }
+    .sectionQuien__h4{
+        font-size: 2.2em;
+    }
+    .sectionJugamos__span{
+        width: 100%;
+        font-size: 1.7em;
+    }
+}
+@media (max-width:292px){
+    .sectionJugamos__span{
+        width: 100%;
+        font-size: 2em;
+    }
+    .fondoSimbolo__parrafo--packaging{
+        width: 95%;
+    }
+}
+@media (max-width:290px){
+    .header__proyectos{
+        width: 180%;
+    }
+    .header__proceso{
+        width: 180%;
+    }
+}
+@media (max-width:286px){
+    .header__servicios{
+        width: 300%;
+    }
+    .header__proyectos{
+        width: 300%;
+    }
+    .header__proceso{
+        width: 300%;
+    }
+    .header__agenda{
+        width: 300%;
+    }
+    .header__quienSoy{
+        width: 300%;
+    }
+    .sectionQuien__h4{
+        font-size: 2em;
+    }
+}
+@media (max-width:279px){
+    .sectionServicios__h3{
+        font-size: 3em;
+    }
+    .fondoSimbolo__titulo--pack{
+        font-size: 1.3em;
+    }
+    .sectionQuien__h4{
+        font-size: 2em;
+    }
+    .sectionJugamos__span{
+        width: 100%;
+        font-size: 2em;
+    }
+    .nav{
+        width: 100%;
+    }
+    .nav__ul{
+        width: 100%;
+    }
+    .nav__li{
+        font-size: 0.8em;
+    }
+}
+@media (max-width:278px){
+    .fondoSimbolo__titulo{
+        font-size: 1.4em;
+    }
+}
+@media (max-width:270px){
+    .header__servicios{
+        width: 200%;
+    }
+    .header__proyectos{
+        width: 240%;
+    }
+    .header__proceso{
+        width: 200%;
+    }
+    .header__aProceso{
+        font-size: 0.8em;
+    }
+    .header__quienSoy{
+        width: 200%;
+    }
+    .header__enlace{
+        font-size: 0.6em;
+    }
+    .fondoSimbolo__titulo{
+        font-size: 1.2em;
+    }
+    .fondoSimbolo__titulo--pack{
+        font-size: 1.3em;
+    }
+    .nav__ul{
+        font-size: 0.8em;
+    }
+}
+@media (max-width:268px){
+    .header__agenda{
+        width: 200%;
+    }
+    .fondoSimbolo__titulo{
+        font-size: 1.3em;
+        line-height: 1.5rem;
+    }
+    .fondoSimbolo__parrafo{
+        font-size: 0.8em;
+        line-height: 1.2rem;
+    }
+    .sectionQuien__h4{
+        font-size: 1.9em;
+    }
+    .sectionJugamos__span{
+        width: 100%;
+        font-size: 1.8em;
+    }
+}
+@media (max-width:260px){
+    .header__aProyectos{
+        font-size: 0.7em;
+    }
+    .sectionQuien__h4{
+        font-size: 1.8em;
+    }
+}
+@media (max-width:259px){
+    .fondoSimbolo__titulo--pack{
+        font-size: 1.2em;
+    }    
+}
+@media (max-width:256px){
+    .acordeon__ul{
+        gap: 0.5rem;
+    }
+    .sectionJugamos__button{
+        width: 80%;
+    }
+    .enlaces__picture{
+        width: 85%;
+    }
+}
+@media (max-width:254px){
+    .header__agenda{
+        width: 230%;
+    }
+    .fondoSimbolo__titulo{
+        font-size: 1.2em;
+    }
+}
+@media (max-width:251px){
+    .header__servicios{
+        width: 250%;
+    }
+    .fondoSimbolo__titulo{
+        font-size: 1em;
+    }
+}
+@media (max-width:252px){
+    .fondoSimbolo__titulo--pack{
+        font-size: 1.2em;
+    }
+    .fondoSimbolo__parrafo{
+        font-size: 0.7em;
+    }
+    .fondoSimbolo__titulo{
+        font-size: 1.2em;
+    }
+    .sectionQuien__h4{
+        font-size: 2em;
+        padding: 2rem;
+    }
+    .acordeon__li{
+        font-size: 0.5em;
+    }
+    .sectionJugamos__span{
+        width: 100%;
+        font-size: 1.8em;
+    }
+    .sectionJugamos__button{
+        width: 80%;
+    }
+    .nav{
+        width: 100%;
+    }
+    .nav__ul{
+        width: 100%;
+        padding: 0.5rem;
+    }
+}
+@media (max-width:250px){
+    .marquesina__div{
+        font-size: 2.3em;
+    }
+    .fondoSimbolo__titulo{
+        font-size: 1.1em;
+    }
+    .fondoSimbolo__titulo--pack{
+        font-size: 1.1em;
+    }
+    .sectionJugamos__span{
+        width: 100%;
+        font-size: 1.8em;
+    }
+}
+@media (max-width:247px){
+    .sectionServicios__h3{
+        font-size: 2.5em;
+    }
+    .sectionJugamos__span{
+        width: 100%;
+        font-size: 1.7em;
+    }
+}
+@media (max-width:246px){
+    .slider__container{
+        left: 1.8rem;
+    }
+}
+@media (max-width:240px){
+    .header__agenda{
+        width: 220%;
+    }
+    .fondoSimbolo__titulo{
+        font-size: 1em;
+    }
+    .header__servicios{
+        width: 220%;
+    }
+}
